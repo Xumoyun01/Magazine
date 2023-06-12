@@ -73,7 +73,7 @@ public class BasketController {
     )
     @PutMapping(value = ("/update"))
     public ResponseDto<BasketDto> updateBasket(@RequestParam Integer basketId,
-                                                   @RequestBody BasketDto dto) {
+                                               @RequestBody BasketDto dto) {
         return basketService.updateBasket(dto, basketId);
     }
 
@@ -109,7 +109,7 @@ public class BasketController {
             )
     )
     @GetMapping(value = "/get-search")
-    public ResponseDto<Page<BasketDto>> getAdventSearch(@RequestParam Map<String,String> params){
+    public ResponseDto<Page<BasketDto>> getAdventSearch(@RequestParam Map<String, String> params) {
         return basketService.getAdventSearch(params);
     }
 }
